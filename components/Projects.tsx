@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Lightbox from "./Lightbox";
+import AnimateIn from "./AnimateIn";
 
 const featured = [
   {
@@ -90,15 +91,18 @@ export default function Projects() {
   return (
     <section id="projects" className="py-28 border-t border-[#1a1a1a]">
       <div className="max-w-5xl mx-auto px-6">
-        <p className="font-mono text-xs text-[#a78bfa] tracking-widest uppercase mb-4">
-          Projetos
-        </p>
-        <h2 className="text-3xl md:text-4xl font-black text-[#e8e8e8] uppercase tracking-tight mb-14">
-          PROJETOS SELECIONADOS<span className="text-[#a78bfa]">.</span>
-        </h2>
+        <AnimateIn>
+          <p className="font-mono text-xs text-[#a78bfa] tracking-widest uppercase mb-4">
+            Projetos
+          </p>
+          <h2 className="text-3xl md:text-4xl font-black text-[#e8e8e8] uppercase tracking-tight mb-14">
+            PROJETOS SELECIONADOS<span className="text-[#a78bfa]">.</span>
+          </h2>
+        </AnimateIn>
 
         {/* Featured */}
-        <div className="grid md:grid-cols-2 gap-5 mb-10">
+        <AnimateIn delay={0.1}>
+          <div className="grid md:grid-cols-2 gap-5 mb-10">
           {featured.map((project) => (
             <div
               key={project.name}
@@ -162,10 +166,12 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        </AnimateIn>
 
         {/* Other projects grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <AnimateIn delay={0.15}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {other.map((project) => (
             <div
               key={project.name}
@@ -226,7 +232,8 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        </AnimateIn>
       </div>
 
       {lightbox && (
