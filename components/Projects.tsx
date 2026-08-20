@@ -8,18 +8,18 @@ const featured = [
   {
     name: "MTEC",
     description:
-      "Plataforma de catálogo para Atas de Registro de Preços com 900+ listagens. Tema WordPress customizado do zero com Tailwind CSS, sistema de filtros avançado, integração com Salesforce via REST API, RD Station, SendGrid e pipeline automatizado de imagens com Node.js e IA.",
+      "Plataforma de catálogo para Atas de Registro de Preços com 900+ listagens. Tema WordPress customizado do zero com Tailwind CSS, 12+ endpoints REST customizados, sistema de filtros avançado, integração com Salesforce via REST API, RD Station, SendGrid, geração de PDF e pipeline automatizado de imagens com Node.js e IA.",
     url: "https://mtec.com.vc",
-    tags: ["WordPress", "PHP", "Tailwind CSS", "Salesforce", "Node.js", "ACF", "WooCommerce"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "Tailwind CSS", "REST API", "Salesforce", "jQuery", "Swiper", "Gravity Forms", "Node.js", "ACF", "WooCommerce"],
     type: "Plataforma",
     screenshot: "/screenshots/mtec.png",
   },
   {
     name: "DOQ.APP",
     description:
-      "Plataforma de atendimento ao cliente com integração WhatsApp. Desenvolvi o tema WordPress customizado do zero e a integração frontend com a WhatsApp Business API (Evolution API). Inclui painel estilo kanban, gestão de filas e automação de mensagens. Deploy com Docker e Fly.io.",
+      "Plataforma de atendimento ao cliente com integração WhatsApp. Desenvolvi o tema WordPress customizado do zero, chatbot customizado, painel estilo kanban com 15+ handlers AJAX, gestão de filas e automação de mensagens. Backend com Supabase. Deploy com Docker e Fly.io.",
     url: "https://doq.app",
-    tags: ["WordPress", "PHP", "Tema Customizado", "WhatsApp API", "JavaScript", "Docker", "Fly.io"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "WhatsApp API", "Supabase", "JavaScript", "AJAX", "Docker", "Fly.io"],
     type: "SaaS",
     screenshot: "/screenshots/doq.png",
   },
@@ -28,30 +28,30 @@ const featured = [
 const other = [
   {
     name: "Conexão Procópio",
-    description: "Tema WordPress customizado do zero para plataforma de capacitação de profissionais que trabalham com TEA, com integração WooCommerce para venda de cursos e conteúdos.",
+    description: "Tema WordPress customizado do zero para plataforma de capacitação de profissionais que trabalham com TEA, com WooCommerce Subscriptions para assinaturas de cursos, Slick Slider e handlers AJAX para progresso de aulas.",
     url: null,
-    tags: ["WordPress", "PHP", "Tema Customizado", "WooCommerce"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "WooCommerce", "Slick Slider", "AJAX"],
     screenshot: "/screenshots/conexao-procopio.png",
   },
   {
     name: "Carol Sacramento",
-    description: "Landing page com tema WordPress customizado do zero para terapeuta integrativa, com loja WooCommerce para venda de consultas e produtos naturais.",
+    description: "Landing page com tema WordPress customizado do zero para terapeuta integrativa, com WooCommerce para venda de consultas e produtos, e busca de CEP via AJAX.",
     url: null,
-    tags: ["WordPress", "PHP", "Tema Customizado", "WooCommerce", "Landing Page"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "WooCommerce", "AJAX", "Landing Page"],
     screenshot: "/screenshots/carol-sacramento.png",
   },
   {
     name: "SINDJUS",
-    description: "Tema WordPress customizado do zero para sindicato nacional com portal completo de notícias, TV online, área do associado, benefícios, boletins e serviços.",
+    description: "Tema WordPress customizado do zero para sindicato nacional com portal de notícias, TV online, área do associado com 20+ handlers AJAX, drag-and-drop de conteúdo via Sortable.js, boletins e benefícios.",
     url: "https://sindjus.org",
-    tags: ["WordPress", "PHP", "Tema Customizado", "Tailwind CSS", "ACF"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "Tailwind CSS", "AJAX", "Sortable.js", "ACF"],
     screenshot: "/screenshots/sindjus.png",
   },
   {
     name: "ANED",
-    description: "Tema WordPress customizado do zero e loja WooCommerce com sistema automatizado de renovação de associação por e-mail.",
+    description: "Tema WordPress customizado do zero e loja WooCommerce com Select2, sistema automatizado de renovação de associação por e-mail via SendGrid e integração com RD Station.",
     url: "https://aned.org",
-    tags: ["WordPress", "PHP", "Tema Customizado", "WooCommerce", "Tailwind CSS", "ACF"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "WooCommerce", "Select2", "SendGrid", "RD Station", "ACF"],
     screenshot: "/screenshots/aned.png",
   },
   {
