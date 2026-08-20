@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import Lightbox from "./Lightbox";
 
 const featured = [
   {
@@ -81,6 +85,8 @@ const other = [
 ];
 
 export default function Projects() {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
   return (
     <section id="projects" className="py-28 border-t border-[#1a1a1a]">
       <div className="max-w-5xl mx-auto px-6">
@@ -93,117 +99,143 @@ export default function Projects() {
 
         {/* Featured */}
         <div className="grid md:grid-cols-2 gap-5 mb-10">
-          {featured.map((project) => {
-            const Tag = project.url ? "a" : "div";
-            const linkProps = project.url
-              ? { href: project.url, target: "_blank", rel: "noopener noreferrer" }
-              : {};
-            return (
-              <Tag
-                key={project.name}
-                {...linkProps}
-                className="group bg-[#161616] border border-[#252525] rounded-xl overflow-hidden hover:border-[#a78bfa]/30 hover:bg-[#1a1a1a] transition-all duration-300 flex flex-col"
-              >
-                {project.screenshot && (
-                  <div className="relative w-full h-44 overflow-hidden">
-                    <Image
-                      src={project.screenshot}
-                      alt={`Screenshot do projeto ${project.name}`}
-                      fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#161616]/60" />
+          {featured.map((project) => (
+            <div
+              key={project.name}
+              className="group bg-[#161616] border border-[#252525] rounded-xl overflow-hidden hover:border-[#a78bfa]/30 hover:bg-[#1a1a1a] transition-all duration-300 flex flex-col"
+            >
+              {project.screenshot && (
+                <button
+                  onClick={() => setLightbox({ src: project.screenshot!, alt: project.name })}
+                  className="relative w-full h-44 overflow-hidden block cursor-zoom-in"
+                  aria-label={`Ver screenshot de ${project.name}`}
+                >
+                  <Image
+                    src={project.screenshot}
+                    alt={`Screenshot do projeto ${project.name}`}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#161616]/60" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <span className="bg-black/60 text-white text-xs font-mono px-3 py-1.5 rounded-full border border-white/20">
+                      ver completo ↗
+                    </span>
                   </div>
-                )}
-                <div className="p-7 flex flex-col gap-5 flex-1">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <span className="font-mono text-[10px] text-[#a78bfa] tracking-widest uppercase">
-                        {project.type}
-                      </span>
-                      <h3 className="text-lg font-semibold text-[#e8e8e8] mt-1 group-hover:text-[#a78bfa] transition-colors">
-                        {project.name}
-                      </h3>
-                    </div>
-                    {project.url && (
-                      <span className="text-[#444] group-hover:text-[#a78bfa] transition-colors text-lg shrink-0">
-                        ↗
-                      </span>
-                    )}
+                </button>
+              )}
+              <div className="p-7 flex flex-col gap-5 flex-1">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <span className="font-mono text-[10px] text-[#a78bfa] tracking-widest uppercase">
+                      {project.type}
+                    </span>
+                    <h3 className="text-lg font-semibold text-[#e8e8e8] mt-1">
+                      {project.name}
+                    </h3>
                   </div>
-                  <p className="text-sm text-[#777] leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[11px] font-mono px-2 py-1 rounded-md bg-[#0d0d0d] border border-[#252525] text-[#555]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#444] hover:text-[#a78bfa] transition-colors text-lg shrink-0"
+                      aria-label={`Visitar ${project.name}`}
+                    >
+                      ↗
+                    </a>
+                  )}
                 </div>
-              </Tag>
-            );
-          })}
+                <p className="text-sm text-[#777] leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[11px] font-mono px-2 py-1 rounded-md bg-[#0d0d0d] border border-[#252525] text-[#555]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Other projects grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {other.map((project) => {
-            const Tag = project.url ? "a" : "div";
-            const linkProps = project.url
-              ? { href: project.url, target: "_blank", rel: "noopener noreferrer" }
-              : {};
-            return (
-              <Tag
-                key={project.name}
-                {...linkProps}
-                className="group bg-[#161616] border border-[#252525] rounded-xl overflow-hidden hover:border-[#a78bfa]/20 hover:bg-[#181818] transition-all duration-300 flex flex-col"
-              >
-                {project.screenshot && (
-                  <div className="relative w-full h-32 overflow-hidden">
-                    <Image
-                      src={project.screenshot}
-                      alt={`Screenshot do projeto ${project.name}`}
-                      fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#161616]/60" />
+          {other.map((project) => (
+            <div
+              key={project.name}
+              className="group bg-[#161616] border border-[#252525] rounded-xl overflow-hidden hover:border-[#a78bfa]/20 hover:bg-[#181818] transition-all duration-300 flex flex-col"
+            >
+              {project.screenshot && (
+                <button
+                  onClick={() => setLightbox({ src: project.screenshot!, alt: project.name })}
+                  className="relative w-full h-32 overflow-hidden block cursor-zoom-in"
+                  aria-label={`Ver screenshot de ${project.name}`}
+                >
+                  <Image
+                    src={project.screenshot}
+                    alt={`Screenshot do projeto ${project.name}`}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#161616]/60" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <span className="bg-black/60 text-white text-[10px] font-mono px-2.5 py-1 rounded-full border border-white/20">
+                      ver completo ↗
+                    </span>
                   </div>
-                )}
-                <div className="p-5 flex flex-col gap-4 flex-1">
-                  <div className="flex items-start justify-between">
-                    <h3 className="text-sm font-semibold text-[#e8e8e8] group-hover:text-[#a78bfa] transition-colors">
-                      {project.name}
-                    </h3>
-                    {project.url ? (
-                      <span className="text-[#333] group-hover:text-[#a78bfa] transition-colors text-sm shrink-0">↗</span>
-                    ) : (
-                      <span className="text-[10px] font-mono text-[#333] shrink-0">offline</span>
-                    )}
-                  </div>
-                  <p className="text-xs text-[#666] leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 mt-auto">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#0d0d0d] border border-[#222] text-[#444]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                </button>
+              )}
+              <div className="p-5 flex flex-col gap-4 flex-1">
+                <div className="flex items-start justify-between">
+                  <h3 className="text-sm font-semibold text-[#e8e8e8]">
+                    {project.name}
+                  </h3>
+                  {project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#333] hover:text-[#a78bfa] transition-colors text-sm shrink-0"
+                      aria-label={`Visitar ${project.name}`}
+                    >
+                      ↗
+                    </a>
+                  ) : (
+                    <span className="text-[10px] font-mono text-[#333] shrink-0">offline</span>
+                  )}
                 </div>
-              </Tag>
-            );
-          })}
+                <p className="text-xs text-[#666] leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#0d0d0d] border border-[#222] text-[#444]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+
+      {lightbox && (
+        <Lightbox
+          src={lightbox.src}
+          alt={lightbox.alt}
+          onClose={() => setLightbox(null)}
+        />
+      )}
     </section>
   );
 }
