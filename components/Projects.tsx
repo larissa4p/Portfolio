@@ -8,7 +8,7 @@ const featured = [
     url: "https://mtec.com.vc",
     tags: ["WordPress", "PHP", "Tailwind CSS", "Salesforce", "Node.js", "ACF", "WooCommerce"],
     type: "Plataforma",
-    screenshot: null,
+    screenshot: "/screenshots/mtec.png",
   },
   {
     name: "DOQ.APP",
@@ -38,10 +38,10 @@ const other = [
   },
   {
     name: "SINDJUS",
-    description: "Tema WordPress customizado do zero para sindicato do setor público, com área restrita para associados e gestão de conteúdo.",
+    description: "Tema WordPress customizado do zero para sindicato nacional com portal completo de notícias, TV online, área do associado, benefícios, boletins e serviços.",
     url: "https://sindjus.org",
     tags: ["WordPress", "PHP", "Tema Customizado", "Tailwind CSS", "ACF"],
-    screenshot: null,
+    screenshot: "/screenshots/sindjus.png",
   },
   {
     name: "ANED",
@@ -52,24 +52,24 @@ const other = [
   },
   {
     name: "Territorial Sindical",
-    description: "Tema WordPress customizado do zero para sindicato, com páginas institucionais e gestão de conteúdo.",
+    description: "Tema WordPress customizado do zero para sindicato de servidores públicos, com portal de notícias, editais, eventos, vídeos e área do filiado.",
     url: "https://territorialsindical.org.br",
     tags: ["WordPress", "PHP", "Tema Customizado"],
-    screenshot: null,
+    screenshot: "/screenshots/territorial-sindical.png",
   },
   {
     name: "CAEFE",
-    description: "Tema WordPress customizado do zero para instituição de ensino, com áreas de conteúdo flexíveis via ACF.",
+    description: "Tema WordPress customizado do zero para caixa de assistência de empregados, com área de benefícios, seguros, notícias e geração de boletos.",
     url: "https://caefe.com.br",
     tags: ["WordPress", "PHP", "Tema Customizado", "ACF"],
-    screenshot: null,
+    screenshot: "/screenshots/caefe.png",
   },
   {
     name: "Cantin",
-    description: "Tema WordPress customizado do zero, com múltiplas versões ao longo da evolução da marca.",
+    description: "Tema WordPress customizado do zero para plataforma de impacto social que conecta pessoas trans a terreiros afro-brasileiros inclusivos em todo o Brasil.",
     url: "https://cantinbr.com.br",
     tags: ["WordPress", "PHP", "Tema Customizado"],
-    screenshot: null,
+    screenshot: "/screenshots/cantin.png",
   },
   {
     name: "CLIFALI",
