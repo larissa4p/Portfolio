@@ -4,15 +4,15 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="max-w-xl">
           <p className="font-mono text-xs text-[#a78bfa] tracking-widest uppercase mb-4">
-            Contact
+            Contato
           </p>
-          <h2 className="text-3xl font-semibold text-[#e8e8e8] mb-4">
-            Let&apos;s work together
+          <h2 className="text-3xl md:text-4xl font-black text-[#e8e8e8] uppercase tracking-tight mb-4">
+            VAMOS TRABALHAR JUNTOS<span className="text-[#a78bfa]">.</span>
           </h2>
           <p className="text-[#777] text-sm leading-relaxed mb-10">
-            I&apos;m currently open to new opportunities — remote or hybrid,
-            based in Brasília. If you have a project or a position that could
-            be a good fit, feel free to reach out.
+            Estou aberta a novas oportunidades — remoto ou híbrido,
+            baseada em Brasília. Se você tem um projeto ou uma vaga que pode
+            fazer sentido, fique à vontade para entrar em contato.
           </p>
 
           <div className="flex flex-col gap-4">
@@ -24,7 +24,7 @@ export default function Contact() {
                 <span className="text-[#a78bfa] text-sm">@</span>
               </div>
               <div>
-                <p className="text-xs text-[#555] mb-0.5">Email</p>
+                <p className="text-xs text-[#555] mb-0.5">E-mail</p>
                 <p className="text-sm text-[#e8e8e8] group-hover:text-[#a78bfa] transition-colors">
                   larissabessa4@gmail.com
                 </p>

@@ -2,17 +2,17 @@ const featured = [
   {
     name: "MTEC",
     description:
-      "Catalog platform for public procurement records (Atas de Registro de Preços) with 900+ listings. Custom WordPress theme built from scratch with Tailwind CSS, advanced filtering system, Salesforce integration via REST API, RD Station, SendGrid, and an automated image pipeline using Node.js and AI.",
+      "Plataforma de catálogo para Atas de Registro de Preços com 900+ listagens. Tema WordPress customizado do zero com Tailwind CSS, sistema de filtros avançado, integração com Salesforce via REST API, RD Station, SendGrid e pipeline automatizado de imagens com Node.js e IA.",
     url: "https://mtec.com.vc",
     tags: ["WordPress", "PHP", "Tailwind CSS", "Salesforce", "Node.js", "ACF", "WooCommerce"],
-    type: "Platform",
+    type: "Plataforma",
   },
   {
     name: "DOQ.APP",
     description:
-      "Customer service platform with WhatsApp integration. Developed the WordPress theme and the frontend integration with WhatsApp Business API (Evolution API). Features a kanban-style service panel, queue management and message automation. Deployed with Docker and Fly.io.",
+      "Plataforma de atendimento ao cliente com integração WhatsApp. Desenvolvi o tema WordPress customizado do zero e a integração frontend com a WhatsApp Business API (Evolution API). Inclui painel estilo kanban, gestão de filas e automação de mensagens. Deploy com Docker e Fly.io.",
     url: "https://doq.app",
-    tags: ["WordPress", "PHP", "WhatsApp API", "JavaScript", "Docker", "Fly.io"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "WhatsApp API", "JavaScript", "Docker", "Fly.io"],
     type: "SaaS",
   },
 ];
@@ -20,39 +20,39 @@ const featured = [
 const other = [
   {
     name: "SINDJUS",
-    description: "Custom WordPress theme for a public sector union, with restricted member area and content management.",
+    description: "Tema WordPress customizado do zero para sindicato do setor público, com área restrita para associados e gestão de conteúdo.",
     url: "https://sindjus.org",
-    tags: ["WordPress", "PHP", "Tailwind CSS", "ACF"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "Tailwind CSS", "ACF"],
   },
   {
     name: "ANED",
-    description: "WooCommerce e-commerce platform with automated membership renewal system via email.",
+    description: "Tema WordPress customizado do zero e loja WooCommerce com sistema automatizado de renovação de associação por e-mail.",
     url: "https://aned.org",
-    tags: ["WordPress", "WooCommerce", "Tailwind CSS", "ACF"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "WooCommerce", "Tailwind CSS", "ACF"],
   },
   {
     name: "Territorial Sindical",
-    description: "Institutional WordPress site with custom theme and content management.",
+    description: "Tema WordPress customizado do zero para sindicato, com páginas institucionais e gestão de conteúdo.",
     url: "https://territorialsindical.org.br",
-    tags: ["WordPress", "PHP", "Custom Theme"],
+    tags: ["WordPress", "PHP", "Tema Customizado"],
   },
   {
     name: "CAEFE",
-    description: "Institutional website with custom WordPress theme and ACF integration.",
+    description: "Tema WordPress customizado do zero para instituição de ensino, com áreas de conteúdo flexíveis via ACF.",
     url: "https://caefe.com.br",
-    tags: ["WordPress", "PHP", "ACF"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "ACF"],
   },
   {
     name: "Cantin",
-    description: "WordPress site with iterative theme development across multiple versions.",
+    description: "Tema WordPress customizado do zero, com múltiplas versões ao longo da evolução da marca.",
     url: "https://cantinbr.com.br",
-    tags: ["WordPress", "PHP", "Custom Theme"],
+    tags: ["WordPress", "PHP", "Tema Customizado"],
   },
   {
     name: "CLIFALI",
-    description: "Institutional WordPress website with custom theme and advanced custom fields.",
+    description: "Tema WordPress customizado do zero com conteúdo dinâmico via ACF para site institucional.",
     url: "https://clifali.com.br",
-    tags: ["WordPress", "PHP", "ACF"],
+    tags: ["WordPress", "PHP", "Tema Customizado", "ACF"],
   },
 ];
 
@@ -61,10 +61,10 @@ export default function Projects() {
     <section id="projects" className="py-28 border-t border-[#1a1a1a]">
       <div className="max-w-5xl mx-auto px-6">
         <p className="font-mono text-xs text-[#a78bfa] tracking-widest uppercase mb-4">
-          Projects
+          Projetos
         </p>
-        <h2 className="text-3xl font-semibold text-[#e8e8e8] mb-14">
-          Selected work
+        <h2 className="text-3xl md:text-4xl font-black text-[#e8e8e8] uppercase tracking-tight mb-14">
+          PROJETOS SELECIONADOS<span className="text-[#a78bfa]">.</span>
         </h2>
 
         {/* Featured */}

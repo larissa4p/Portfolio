@@ -6,7 +6,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Larissa Bessa
         </p>
         <p className="font-mono text-xs text-[#333]">
-          Built with Next.js & Tailwind CSS
+          Feito com Next.js & Tailwind CSS
         </p>
       </div>
     </footer>

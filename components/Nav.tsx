@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { label: "About", href: "#about" },
+  { label: "Sobre", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projetos", href: "#projects" },
+  { label: "Contato", href: "#contact" },
 ];
 
 export default function Nav() {
@@ -38,7 +38,7 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[#777] hover:text-[#e8e8e8] transition-colors duration-200"
+              className="text-xs font-mono text-[#555] hover:text-[#e8e8e8] tracking-widest uppercase transition-colors duration-200"
             >
               {link.label}
             </a>

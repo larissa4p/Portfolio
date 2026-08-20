@@ -4,76 +4,88 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center pt-16"
+      className="min-h-screen flex items-center pt-16 pb-10"
     >
       <div className="max-w-5xl mx-auto px-6 w-full">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
-          {/* Photo */}
-          <div className="shrink-0">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-[#252525] ring-4 ring-[#a78bfa]/10">
-              <Image
-                src="/photo.jpg"
-                alt="Larissa Bessa"
-                width={160}
-                height={160}
-                className="w-full h-full object-cover"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Text */}
-          <div className="flex flex-col gap-5 text-center md:text-left">
-            <div>
-              <p className="font-mono text-sm text-[#a78bfa] mb-3 tracking-widest uppercase">
-                Available for remote work
-              </p>
-              <h1 className="text-4xl md:text-6xl font-semibold text-[#e8e8e8] leading-tight tracking-tight">
-                Larissa Bessa
-              </h1>
-              <p className="mt-2 text-xl md:text-2xl text-[#777] font-light">
-                Web Developer · WordPress & PHP · React
-              </p>
-            </div>
-
-            <p className="max-w-xl text-base text-[#888] leading-relaxed">
-              4+ years building real projects — custom WordPress themes from
-              scratch, WooCommerce stores, API integrations and front-end
-              interfaces. Based in Brasília, open to remote opportunities.
+          {/* Texto */}
+          <div className="flex flex-col gap-6 flex-1">
+            <p className="font-mono text-xs text-[#a78bfa] tracking-widest uppercase">
+              Disponível para trabalho remoto · Brasília, DF
             </p>
 
-            <div className="flex items-center gap-4 justify-center md:justify-start flex-wrap">
+            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight uppercase">
+              CONSTRUINDO A WEB<br />
+              QUE FUNCIONA<span className="text-[#a78bfa]">.</span>
+            </h1>
+
+            <p className="max-w-lg text-[#777] text-sm leading-relaxed">
+              Sou Larissa Bessa, desenvolvedora web com 4+ anos de experiência
+              entregando projetos reais. Especializada em WordPress, PHP e React —
+              de temas customizados a integrações complexas com APIs. Levo projetos
+              da ideia à produção.
+            </p>
+
+            <div className="flex items-center gap-3 flex-wrap pt-2">
               <a
                 href="#projects"
-                className="px-5 py-2.5 bg-[#a78bfa] text-[#0d0d0d] rounded-lg text-sm font-semibold hover:bg-[#c4b5fd] transition-colors duration-200"
+                className="px-6 py-3 bg-[#a78bfa] text-[#0d0d0d] rounded-lg text-sm font-bold hover:bg-[#c4b5fd] transition-colors duration-200"
               >
-                View Projects
+                Ver meus projetos
               </a>
               <a
                 href="#contact"
-                className="px-5 py-2.5 border border-[#252525] text-[#e8e8e8] rounded-lg text-sm font-medium hover:border-[#a78bfa]/40 hover:bg-[#a78bfa]/5 transition-all duration-200"
+                className="px-6 py-3 border border-[#2a2a2a] text-[#999] rounded-lg text-sm font-medium hover:border-[#a78bfa]/40 hover:text-[#e8e8e8] transition-all duration-200"
               >
-                Get in touch
+                Entrar em contato
               </a>
+            </div>
+
+            {/* Social links */}
+            <div className="flex items-center gap-5 pt-2">
               <a
                 href="https://github.com/larissa4p"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 border border-[#252525] text-[#777] rounded-lg text-sm font-medium hover:text-[#e8e8e8] hover:border-[#333] transition-all duration-200"
+                className="text-xs text-[#555] hover:text-[#a78bfa] transition-colors font-mono"
               >
                 GitHub ↗
               </a>
+              <a
+                href="https://linkedin.com/in/larissa4p"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-[#555] hover:text-[#a78bfa] transition-colors font-mono"
+              >
+                LinkedIn ↗
+              </a>
+              <a
+                href="mailto:larissabessa4@gmail.com"
+                className="text-xs text-[#555] hover:text-[#a78bfa] transition-colors font-mono"
+              >
+                Email ↗
+              </a>
             </div>
           </div>
-        </div>
 
-        {/* Scroll hint */}
-        <div className="mt-24 flex justify-center md:justify-start">
-          <div className="flex flex-col items-center gap-2 text-[#444]">
-            <div className="w-px h-12 bg-gradient-to-b from-[#444] to-transparent" />
-            <span className="font-mono text-xs tracking-widest">scroll</span>
+          {/* Foto */}
+          <div className="shrink-0 flex justify-center">
+            <div className="relative">
+              <div className="w-52 h-52 md:w-64 md:h-64 rounded-2xl overflow-hidden border border-[#2a2a2a]">
+                <Image
+                  src="/photo.jpg"
+                  alt="Larissa Bessa"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -inset-1 rounded-2xl bg-[#a78bfa]/10 blur-xl -z-10" />
+            </div>
           </div>
+
         </div>
       </div>
     </section>

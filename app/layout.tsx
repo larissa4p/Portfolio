@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Larissa Bessa — Web Developer",
+  title: "Larissa Bessa — Desenvolvedora Web",
   description:
-    "Web developer specialized in WordPress, PHP, React.js and Next.js. Based in Brasília, open to remote work.",
+    "Desenvolvedora web especializada em WordPress, PHP, React.js e Next.js. Baseada em Brasília, disponível para trabalho remoto.",
   keywords: [
-    "web developer",
+    "desenvolvedora web",
     "WordPress",
     "PHP",
     "React",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Larissa Bessa" }],
   openGraph: {
-    title: "Larissa Bessa — Web Developer",
+    title: "Larissa Bessa — Desenvolvedora Web",
     description:
-      "Web developer specialized in WordPress, PHP and React.js. 4+ years delivering real projects.",
+      "Desenvolvedora web especializada em WordPress, PHP e React.js. 4+ anos entregando projetos reais.",
     type: "website",
   },
 };
@@ -41,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="min-h-screen antialiased">{children}</body>
