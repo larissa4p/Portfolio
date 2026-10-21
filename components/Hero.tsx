@@ -181,7 +181,7 @@ export default function Hero() {
           {/* Descrição */}
           <motion.p variants={item} className="text-[#666] text-sm leading-relaxed max-w-md">
             Quase 5 anos em PHP e WordPress de verdade: temas e plugins do zero, sem page builder.
-            Salesforce, WhatsApp API, Supabase e Docker em producao. React e Next.js quando o projeto pede.
+            Salesforce, WhatsApp API, Supabase e Docker em produção. React e Next.js quando o projeto pede.
           </motion.p>
 
           {/* CTAs */}

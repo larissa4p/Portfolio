@@ -54,9 +54,9 @@ export default function About() {
           <AnimateIn delay={0.1}>
             <div className="space-y-4 text-[#888] leading-relaxed text-sm">
               <p>
-                Nos ultimos quase 5 anos construi projetos web reais para clientes reais,
-                desde sites institucionais ate plataformas de e-commerce e sistemas
-                com integracoes externas.
+                Nos últimos quase 5 anos construí projetos web reais para clientes reais,
+                desde sites institucionais até plataformas de e-commerce e sistemas
+                com integrações externas.
               </p>
               <p>
                 Meu foco principal é WordPress e PHP, onde desenvolvo temas
