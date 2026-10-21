@@ -31,8 +31,8 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 const stats = [
-  { raw: 23, suffix: "+", label: "Projetos entregues" },
-  { raw: 5,  suffix: "+", label: "Anos de experiência" },
+  { raw: 23, suffix: "",  label: "Projetos entregues" },
+  { raw: 5,  suffix: "",  label: "Anos de experiência" },
   { raw: 8,  suffix: "+", label: "Lojas WooCommerce" },
   { raw: 10, suffix: "+", label: "Integrações com APIs" },
 ];
