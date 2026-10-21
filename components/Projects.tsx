@@ -95,7 +95,7 @@ const other = [
   },
   {
     name: "SINDJUS",
-    description: "Tema WordPress customizado do zero para sindicato nacional com portal de notícias, TV online, área do associado com 20+ handlers AJAX, drag-and-drop de conteúdo via Sortable.js, boletins e benefícios.",
+    description: "Portal do Sindicato dos Servidores do Poder Judiciário e do MPU no DF. Tema WordPress do zero com portal de notícias, TV ao vivo via API do YouTube, área do associado com 20 handlers AJAX, drag-and-drop via Sortable.js, boletins e benefícios.",
     url: "https://sindjus.org",
     tags: ["WordPress", "PHP", "Tema Customizado", "Tailwind CSS", "AJAX", "Sortable.js", "ACF"],
     screenshot: "/screenshots/sindjus.png",
