@@ -32,9 +32,9 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 const stats = [
   { raw: 23, suffix: "+", label: "Projetos entregues" },
-  { raw: 4,  suffix: "+", label: "Anos de experiência" },
+  { raw: 5,  suffix: "+", label: "Anos de experiência" },
   { raw: 8,  suffix: "+", label: "Lojas WooCommerce" },
-  { raw: 5,  suffix: "+", label: "Integrações com APIs" },
+  { raw: 10, suffix: "+", label: "Integrações com APIs" },
 ];
 
 export default function About() {
@@ -54,9 +54,9 @@ export default function About() {
           <AnimateIn delay={0.1}>
             <div className="space-y-4 text-[#888] leading-relaxed text-sm">
               <p>
-                Nos últimos 4 anos construí projetos web reais para clientes reais —
-                desde sites institucionais até plataformas de e-commerce e sistemas
-                com integrações externas.
+                Nos ultimos quase 5 anos construi projetos web reais para clientes reais,
+                desde sites institucionais ate plataformas de e-commerce e sistemas
+                com integracoes externas.
               </p>
               <p>
                 Meu foco principal é WordPress e PHP, onde desenvolvo temas

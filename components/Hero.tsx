@@ -180,8 +180,8 @@ export default function Hero() {
 
           {/* Descrição */}
           <motion.p variants={item} className="text-[#666] text-sm leading-relaxed max-w-md">
-            WordPress, PHP e React — de temas customizados do zero até integrações com APIs externas.
-            Do briefing à produção.
+            Quase 5 anos em PHP e WordPress de verdade: temas e plugins do zero, sem page builder.
+            Salesforce, WhatsApp API, Supabase e Docker em producao. React e Next.js quando o projeto pede.
           </motion.p>
 
           {/* CTAs */}
