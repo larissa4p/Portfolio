@@ -758,17 +758,35 @@ export default function Projects() {
             href="https://larissa4p.github.io"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between p-5 rounded-2xl bg-[#141008] border border-[#2a2015] hover:border-[#d4854a]/40 hover:bg-[#180e08] transition-all duration-300"
+            className="group relative overflow-hidden flex flex-col md:flex-row md:items-center md:justify-between gap-6 p-8 rounded-2xl border border-[#2a2015] hover:border-[#d4854a]/30 transition-all duration-500"
+            style={{ background: "rgba(242,235,226,0.03)" }}
           >
-            <div className="flex flex-col gap-1.5">
-              <h3 className="text-sm font-semibold text-[#f2ebe2]" style={{ fontFamily: "var(--font-dm-mono)" }}>
+            {/* glow de fundo */}
+            <div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              style={{ background: "radial-gradient(ellipse 60% 80% at 0% 50%, rgba(212,133,74,0.06), transparent)" }}
+            />
+
+            <div className="relative flex flex-col gap-3">
+              <span className="text-[10px] text-[#4a3f35] tracking-widest uppercase" style={{ fontFamily: "var(--font-dm-mono)" }}>
+                Site de serviços freelance
+              </span>
+              <h3
+                className="font-black uppercase tracking-tight text-[#f2ebe2] leading-none"
+                style={{ fontFamily: "var(--font-bricolage)", fontSize: "clamp(1.8rem, 4vw, 3rem)" }}
+              >
                 larissa4p.github.io
               </h3>
-              <p className="text-xs text-[#6a5f55]" style={{ fontFamily: "var(--font-dm-sans)" }}>
-                Site de serviços freelance — Next.js 16, Tailwind v4, Framer Motion, deploy via GitHub Actions.
+              <p className="text-sm text-[#6a5f55] max-w-md" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                Next.js 16 · Tailwind v4 · Framer Motion · deploy via GitHub Actions
               </p>
             </div>
-            <span className="text-[#3a3025] group-hover:text-[#d4854a] transition-colors text-sm ml-6 shrink-0">↗</span>
+
+            <span
+              className="relative text-3xl text-[#2a2015] group-hover:text-[#d4854a] group-hover:translate-x-1 transition-all duration-300 shrink-0"
+            >
+              ↗
+            </span>
           </a>
         </AnimateIn>
       </div>
