@@ -748,8 +748,33 @@ export default function Projects() {
         })}
       </div>
 
-      {/* Open Source */}
+      {/* Este site */}
       <div className="max-w-5xl mx-auto px-6 mt-20">
+        <AnimateIn>
+          <p className="text-xs text-[#d4854a] tracking-widest uppercase mb-6" style={{ fontFamily: "var(--font-dm-mono)" }}>
+            Este site
+          </p>
+          <a
+            href="https://larissa4p.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between p-5 rounded-2xl bg-[#141008] border border-[#2a2015] hover:border-[#d4854a]/40 hover:bg-[#180e08] transition-all duration-300"
+          >
+            <div className="flex flex-col gap-1.5">
+              <h3 className="text-sm font-semibold text-[#f2ebe2]" style={{ fontFamily: "var(--font-dm-mono)" }}>
+                larissa4p.github.io
+              </h3>
+              <p className="text-xs text-[#6a5f55]" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                Site de serviços freelance — Next.js 16, Tailwind v4, Framer Motion, deploy via GitHub Actions.
+              </p>
+            </div>
+            <span className="text-[#3a3025] group-hover:text-[#d4854a] transition-colors text-sm ml-6 shrink-0">↗</span>
+          </a>
+        </AnimateIn>
+      </div>
+
+      {/* Open Source */}
+      <div className="max-w-5xl mx-auto px-6 mt-14">
         <AnimateIn delay={0.1}>
           <p className="text-xs text-[#d4854a] tracking-widest uppercase mb-6" style={{ fontFamily: "var(--font-dm-mono)" }}>
             Open Source
